@@ -1862,7 +1862,7 @@ end)
       wait(1)
       vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
    end)
-   
+
 Main:Toggle("No Clip",false,function(value)
    noclip = value
 end)
@@ -1871,4 +1871,7 @@ game:GetService('RunService').Stepped:connect(function()
 if noclip then
 game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
 end
+end)
+Main:Button("Remove Door",function()
+game:GetService("Workspace")["Region_Cave"].Door:Destory()
 end)
